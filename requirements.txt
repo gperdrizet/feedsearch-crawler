@@ -1,5 +1,6 @@
 aiohttp
 bs4
+build
 feedparser
 python-dateutil
 w3lib
