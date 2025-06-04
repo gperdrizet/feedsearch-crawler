@@ -2,7 +2,7 @@
 
 [![PyPI release](https://github.com/gperdrizet/feedsearch-crawler/actions/workflows/publish_pypi.yml/badge.svg)](https://github.com/gperdrizet/feedsearch-crawler/actions/workflows/publish_pypi.yml)
 
-Now published to PyPi, largly unchanged from the original, as [`findfeed`](https://pypi.org/project/findfeed) install with:
+Now published to PyPI, largly unchanged from the original, as [`findfeed`](https://pypi.org/project/findfeed) install with:
 
 ```bash
 pip install findfeed
