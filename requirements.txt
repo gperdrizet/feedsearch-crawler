@@ -1,0 +1,6 @@
+aiohttp
+bs4
+feedparser
+python-dateutil
+w3lib
+yarl

@@ -12,3 +12,6 @@ class TestSearch(unittest.TestCase):
 
         feeds = search('hackernews.com')
         self.assertTrue(isinstance(feeds, list))
+
+        url = str(feeds[0].url)
+        self.assertEqual(url, 'https://news.ycombinator.com/rss')
