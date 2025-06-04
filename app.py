@@ -1,12 +1,14 @@
+'''Crawls urls for rss feeds.'''
+
 import asyncio
 import logging
 import json
 import time
 from pprint import pprint
-from feedsearch_crawler import search, FeedsearchSpider, output_opml, sort_urls
-from feedsearch_crawler.crawler import coerce_url
 from datetime import datetime
-import collections
+from findfeed import FeedsearchSpider, output_opml, sort_urls # search
+from findfeed.crawler import coerce_url
+# import collections
 
 urls = [
     # "arstechnica.com",
@@ -134,9 +136,9 @@ def run_crawl():
     pprint(list((x.score, x.url) for x in items))
 
 
-def create_allowed_domains(urls):
+def create_allowed_domains(url_list):
     domain_patterns = []
-    for url in urls:
+    for url in url_list:
         url = coerce_url(url)
         host = url.host
         pattern = f"*.{host}"
@@ -155,7 +157,7 @@ if __name__ == "__main__":
     )
     ch.setFormatter(formatter)
     fl = logging.FileHandler(
-        f"/home/dbeath/code/feedsearch-crawler/logs/feedsearch_crawl_{datetime.utcnow().isoformat()}"
+        f"logs/feedsearch_crawl_{datetime.utcnow().isoformat()}"
     )
     fl.setLevel((logging.DEBUG))
     fl.setFormatter(formatter)
